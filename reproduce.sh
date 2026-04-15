@@ -48,7 +48,7 @@ pnpm exec fingerprint ./ fingerprint.json 2>/dev/null > fingerprint.diff.json
 python3 - <<'PYEOF'
 import json, sys
 
-with open('/tmp/fp_diff.json') as f:
+with open('fingerprint.diff.json') as f:
     diff = json.load(f)
 
 if not diff:
