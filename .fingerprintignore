@@ -1,0 +1,31 @@
+# Ignore all files
+**/*
+
+# Keep native code
+!**/node_modules/**/*.h
+!**/node_modules/**/*.c
+!**/node_modules/**/*.cpp
+!**/node_modules/**/*.m
+!**/node_modules/**/*.mm
+!**/node_modules/**/*.swift
+!**/node_modules/**/*.rb
+!**/node_modules/**/*.java
+!**/node_modules/**/*.kt
+!**/node_modules/**/*.kts
+!**/node_modules/**/*.gradle
+
+# Ignore useless platforms
+**/windows/**/*
+**/macos/**/*
+
+# Ignore tests
+# android: */android/src/test, */android/app/src/androidTest
+# ios: */ios/Tests, */ios/ExampleTests, */ios/IntegrationTests, */IntegrationTests
+**/android/**/test/**/*
+**/android/**/androidTest/**/*
+**/ios/**/Tests/**/*
+**/ios/**/ExampleTests/**/*
+**/IntegrationTests/**/*
+
+# Ignore build
+**/build/**/*
