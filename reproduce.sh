@@ -44,6 +44,9 @@ node -e "const d=JSON.parse(require('fs').readFileSync('/tmp/fingerprint.json','
 echo ""
 echo "=== Step 4: fingerprint diff ==="
 pnpm exec fingerprint ./ fingerprint.json 2>/dev/null > fingerprint.diff.json
+pnpm exec fingerprint fingerprint:generate > fingerprint.json
+node -e "const fs = require('fs'); const json = JSON.parse(fs.readFileSync('fingerprint.json', 'utf8')); fs.writeFileSync('fingerprint.json', JSON.stringify(json, null, 2));"
+
 python3 - <<'PYEOF'
 import json, sys
 
