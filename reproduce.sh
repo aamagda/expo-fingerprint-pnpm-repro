@@ -20,6 +20,7 @@ pnpm install --silent
 echo ""
 echo "=== Step 2: Generate fingerprint.json (baseline) ==="
 pnpm exec fingerprint fingerprint:generate > fingerprint.json
+node -e "const fs = require('fs'); const json = JSON.parse(fs.readFileSync('fingerprint.json', 'utf8')); fs.writeFileSync('fingerprint.json', JSON.stringify(json, null, 2));"
 echo "Saved fingerprint.json. Sample dir source paths:"
 node -e "const d=JSON.parse(require('fs').readFileSync('fingerprint.json','utf8')); d.sources.filter(s=>s.type==='dir').slice(0,4).forEach(s=>console.log('  '+s.filePath));"
 
