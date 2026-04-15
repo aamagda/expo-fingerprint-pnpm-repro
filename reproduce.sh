@@ -38,9 +38,8 @@ pnpm install --silent
 
 echo ""
 echo "New dir source paths after reshuffle:"
-pnpm exec fingerprint fingerprint:generate 2>/dev/null > fingerprint.json
-node -e "const fs = require('fs'); const json = JSON.parse(fs.readFileSync('fingerprint.json', 'utf8')); fs.writeFileSync('fingerprint.json', JSON.stringify(json, null, 2));"
-node -e "const d=JSON.parse(require('fs').readFileSync('fingerprint.json','utf8')); d.sources.filter(s=>s.type==='dir').slice(0,4).forEach(s=>console.log('  '+s.filePath));"
+pnpm exec fingerprint fingerprint:generate 2>/dev/null > /tmp/fingerprint.json
+node -e "const d=JSON.parse(require('fs').readFileSync('/tmp/fingerprint.json','utf8')); d.sources.filter(s=>s.type==='dir').slice(0,4).forEach(s=>console.log('  '+s.filePath));"
 
 echo ""
 echo "=== Step 4: fingerprint diff ==="
