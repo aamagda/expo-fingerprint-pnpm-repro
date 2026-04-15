@@ -1,0 +1,8 @@
+{
+  "expo": {
+    "name": "expo-fingerprint-pnpm-repro",
+    "slug": "expo-fingerprint-pnpm-repro",
+    "version": "1.0.0",
+    "platforms": ["ios", "android"]
+  }
+}

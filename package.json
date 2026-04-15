@@ -1,0 +1,17 @@
+{
+  "name": "expo-fingerprint-pnpm-repro",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "start": "expo start"
+  },
+  "dependencies": {
+    "expo": "~52.0.0",
+    "react": "18.3.1",
+    "react-native": "0.76.7",
+    "@react-native-community/netinfo": "^11.4.1"
+  },
+  "devDependencies": {
+    "@expo/fingerprint": "^0.15.2"
+  }
+}
